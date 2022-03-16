@@ -11,4 +11,53 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    @Test
+    public void number1HasMoreInstance(){
+        int array[] = {2, 3, 4, 5, 2, 3, 2, 2, 6};
+        Integer number1 = 2;
+        Integer number2 = 3;
+        assertEquals(2, App.findMoreContainedNumber(array, number1, number2));
+    }
+
+    @Test
+    public void number2HasMoreInstance(){
+        int array[] = {1, 2, 5, 7, 8, 8, 8, 0};
+        Integer number1 = 2;
+        Integer number2 = 8;
+        assertEquals(8, App.findMoreContainedNumber(array, number1, number2));
+    }
+
+    @Test
+    public void numbersAreNotInTheArray(){
+        int array[] = {1, 2, 5, 7, 8, 8, 8, 0};
+        Integer number1 = 10;
+        Integer number2 = 15;
+        assertEquals(-1, App.findMoreContainedNumber(array, number1, number2));
+    }
+
+    @Test
+    public void sameNumberOfInstances(){
+        int array[] = {1, 2, 5, 7, 8, 8, 8, 0, 1, 1};
+        Integer number1 = 1;
+        Integer number2 = 8;
+        assertEquals(0, App.findMoreContainedNumber(array, number1, number2));
+    }
+
+    @Test
+    public void number1HasNoInstance(){
+        int array[] = {1, 2, 5, 7, 8, 8, 8, 0, 1, 1};
+        Integer number1 = -3;
+        Integer number2 = 7;
+        assertEquals(7, App.findMoreContainedNumber(array, number1, number2));
+    }
+
+    @Test
+    public void number2HasNoInstance(){
+        int array[] = {1, 2, 5, 7, 8, 8, 8, 0, 1, 1};
+        Integer number1 = 2;
+        Integer number2 = 20;
+        assertEquals(7, App.findMoreContainedNumber(array, number1, number2));
+    }
+
 }

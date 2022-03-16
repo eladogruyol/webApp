@@ -11,4 +11,31 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
     }
+
+    public static int findMoreContainedNumber(int[] array, Integer number1, Integer number2){
+        int number1Count = 0;
+        int number2Count = 0;
+
+        for(int i = 0; i < array.length; i++){
+            if(array[i] == number1.intValue()){
+                number1Count++;
+            }
+            if(array[i] == number2.intValue()){
+                number2Count++;
+            }
+        }
+
+        if(number1Count > number2Count){
+            return number1;
+        }
+        else if(number2Count > number1Count){
+            return number2;
+        }
+        else if(number1Count == 0 && number2Count == 0){
+            return -1;
+        }
+        else{ //number1Count = number2Count but neither of them is 0.
+            return 0;
+        }
+    }
 }

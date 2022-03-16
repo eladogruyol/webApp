@@ -57,7 +57,7 @@ class AppTest {
         int array[] = {1, 2, 5, 7, 8, 8, 8, 0, 1, 1};
         Integer number1 = 2;
         Integer number2 = 20;
-        assertEquals(7, App.findMoreContainedNumber(array, number1, number2));
+        assertEquals(2, App.findMoreContainedNumber(array, number1, number2));
     }
 
 }

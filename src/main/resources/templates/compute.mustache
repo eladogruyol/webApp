@@ -1,0 +1,17 @@
+<title>BIL481 Web App</title>
+  <h1>Find the Number That Has More Instances</h1>
+    Please enter the array separating its elements with comma to the first box.
+    After entering the array, please enter two integers to the next two boxes to compare their instances in the array.
+    Then, press the "sorguyu gonder/submit" button. This app will return the result as the integer that has more instances in the array.
+    If neither of the numbers that will be submitted is not in the array, -1 is returned as result. If both numbers have the same instances, 0 is returned as result. 
+    The result will be shown after the execution.
+    
+  <form action="compute" method="post">
+        <textarea name="inputArray" rows="10" cols="30"></textarea>
+        <textarea name="inputNumber1" rows="10" cols="30"></textarea>
+        <textarea name="inputNumber2" rows="10" cols="30"></textarea>
+        <br>
+        <input type="submit">
+  </form>
+
+  Result is {{result}}
